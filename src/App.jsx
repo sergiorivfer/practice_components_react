@@ -1,21 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import { MyFirstComponents } from './componets/MyFirstComponents'
-import { SecondComponent } from './componets/SecondComponent'
+import MyFirstComponents from './componets/MyFirstComponents';
+import SecondComponent from './componets/SecondComponent';
+import ThirdComponents  from './componets/ThirdComponents';
+import { Child } from './componets/child';
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+const [name, setName] = useState("cualquier cosa");
 
   return (
-    <>
-      <h1>
-        Fundamentos de React
-      </h1>
-      <MyFirstComponents/>
-      <SecondComponent/>
-    </>
+    <div className="App">
+      <header className="App-header">
+        <h1>Fundamentos de React</h1>
+        <hr className='white-hr'/>
+        <MyFirstComponents />
+        <hr className='white-hr'/>
+        <SecondComponent />
+        <hr className='white-hr'/>
+        <ThirdComponents 
+        name="sergio"
+        last_name="rivera"
+        age="20"
+        />
+        <hr className='white-hr'/>
+        <Child 
+          name={name}
+          setName={setName}
+        />
+      </header>
+    </div>
   )
 };
 

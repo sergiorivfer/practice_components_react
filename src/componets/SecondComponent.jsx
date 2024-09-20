@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export const SecondComponent = () => {
  
@@ -17,28 +17,30 @@ export const SecondComponent = () => {
 
     ];
 
-  return (
-    <>
-    <h1> second Component</h1>
-    <div>
-        {/* <ul>
-            <li>{books [0]}</li>
-            <li>{books [1]}</li>
-            <li>{books [2]}</li>
-            <li>{books [3]}</li>
-            <li>{books [4]}</li>
-            <li>{books [5]}</li>
-            <li>{books [6]}</li>
-        </ul> */}
-        <ul>
-            {
-                books.map((book,index)=> {
-                    return <li key={index} > {book}</li>
-                })
-            }
-        </ul>
+    // condicion ? ( si_verdadero ) : ( si_falso )
 
-    </div>
-    </>
-  )
+
+
+    return (
+        <>
+          <h1>SecondComponent</h1>
+          <div>
+            <ul>
+              
+              {books.length >= 1 ?
+              (
+                  books.map((book, index) => {
+                    return <li key={ index }> { book } </li>
+                  })
+              ) : 
+              (
+                <p>No existen libros </p>
+              )}
+
+            </ul>
+          </div>
+        </>
+      )
 }
+
+export default SecondComponent
