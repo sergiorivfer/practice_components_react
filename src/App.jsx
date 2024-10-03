@@ -1,4 +1,5 @@
 import './App.css'
+import { FourComponent } from './componets/FourComponent';
 import MyFirstComponents from './componets/MyFirstComponents';
 import SecondComponent from './componets/SecondComponent';
 import ThirdComponents  from './componets/ThirdComponents';
@@ -13,21 +14,22 @@ const [name, setName] = useState("cualquier cosa");
     <div className="App">
       <header className="App-header">
         <h1>Fundamentos de React</h1>
-        <hr className='white-hr'/>
-        <MyFirstComponents />
+         <hr className='white-hr'/>
+        <FourComponent/>
         <hr className='white-hr'/>
         <SecondComponent />
-        <hr className='white-hr'/>
-        <ThirdComponents 
+        <hr className='white-hr'/> 
+         <ThirdComponents 
         name="sergio"
         last_name="rivera"
-        age="20"
-        />
+        age={20}
+        />  
         <hr className='white-hr'/>
         <Child 
           name={name}
           setName={setName}
         />
+        
       </header>
     </div>
   )
